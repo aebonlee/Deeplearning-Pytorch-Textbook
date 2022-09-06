@@ -12,13 +12,11 @@ import torch.nn as nn
 import torch.nn.functional as F
 import torch.optim as optim
 from torchtext.datasets import AG_NEWS
-from collections import Counter
-from torchtext.vocab import Vocab
 from torchtext.data.utils import get_tokenizer
 from torchtext.vocab import build_vocab_from_iterator
-
 from torch.utils.data import DataLoader
 device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
+
 print(f'selected device: {device}')
 tokenizer = get_tokenizer('spacy')
 
